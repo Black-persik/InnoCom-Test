@@ -11,7 +11,10 @@ async def root():
     return {'message': 'Hello World'}
 @app.on_event('startup')
 async def startup():
-    await database.connect()
+    try:
+        await database.connect()
+    except Exception as e:
+        print("Database connection failed")
 @app.on_event('shutdown')
 async def shutdown():
     await database.disconnect()
