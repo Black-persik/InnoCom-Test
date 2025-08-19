@@ -14,7 +14,7 @@ class CreateSnippet(BaseModel):
 class CommentSnippet(BaseModel):
     snippet_id: int
     user_id: UUID4
-    snippet_text: str
+
 
 class GetSnippet(BaseModel):
     user_id: UUID4
