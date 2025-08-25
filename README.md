@@ -37,7 +37,7 @@ uvicorn main:app --host 0.0.0.0 --port 10000
 В терминале необходимо запустить команду
 alembic revision --autogenerate -m "Add new tables"
 alembic upgrade head
-'''
+```
 ## Структура проекта
 InnoCom-Test/
 ├── .idea/             # Конфигурация IDE (PyCharm/WebStorm и т.п.)
