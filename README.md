@@ -54,5 +54,5 @@ InnoCom-Test/
 ```
 ## Документация endpoints 
 <img width="1868" height="772" alt="{BDE2FBD2-F341-4D2E-A85F-0F4DC3420C2E}" src="https://github.com/user-attachments/assets/f4289b97-f1cf-4a20-8478-13408e004fe2" />
-
-
+- Для каждого эндпоинта кратко описано какие типы данных необходимы для его использования
+- Использованы стандарты REST API
