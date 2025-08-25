@@ -39,6 +39,7 @@ alembic revision --autogenerate -m "Add new tables"
 alembic upgrade head
 ```
 ## Структура проекта
+```bash
 InnoCom-Test/
 ├── .idea/             # Конфигурация IDE (PyCharm/WebStorm и т.п.)
 ├── migrations/        # Миграции базы данных
@@ -50,6 +51,6 @@ InnoCom-Test/
 ├── main.py            # Точка входа: создание приложения FastAPI, подключение роутеров
 ├── alembic.ini        # Конфигурация Alembic для миграций
 └── requirements.txt   # Список зависимостей Python
-
+```
 
 
