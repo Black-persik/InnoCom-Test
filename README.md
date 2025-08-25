@@ -17,7 +17,7 @@ InnoComments предоставляет:
 git clone https://github.com/Black-persik/InnoCom-Test.git
 cd InnoCom-Test
 
-# Создаём виртуальное окружение
+# Создаем виртуальное окружение
 python -m venv venv
 source venv/bin/activate  # или `venv\Scripts\activate` на Windows
 
@@ -25,11 +25,16 @@ source venv/bin/activate  # или `venv\Scripts\activate` на Windows
 pip install -r requirements.txt
 
 # Задаём необходимые переменные окружения
-export SOME_ENV_VAR=value
-export ANOTHER_ENV_VAR=value
-# … (тут ты укажешь конкретно, что использовалось в твоём случае)
+export DATABASE_URL={URL базы данных PostgreSQL}
 
-# Запуск приложения
-uvicorn main:app --reload  # или указать свою команду запуска
+# Меняем url в файле alembic.ini
+sqlalchemy.url = {DATABASE_URL}
 
-# (Опционально) другие команды — например, миграции базы данных, заполнение тестовыми данными и т.п.
+# Запуск приложения на сервере Render (старторвая команда)
+uvicorn main:app --host 0.0.0.0 --port 10000 
+
+# Миграции в базу данных
+В терминале необходимо запустить команду
+alembic revision --autogenerate -m "Add new tables"
+alembic upgrade head
+
