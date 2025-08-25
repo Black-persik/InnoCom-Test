@@ -37,4 +37,19 @@ uvicorn main:app --host 0.0.0.0 --port 10000
 В терминале необходимо запустить команду
 alembic revision --autogenerate -m "Add new tables"
 alembic upgrade head
+'''
+## Структура проекта
+InnoCom-Test/
+├── .idea/             # Конфигурация IDE (PyCharm/WebStorm и т.п.)
+├── migrations/        # Миграции базы данных
+├── models/            # SQLAlchemy / Pydantic модели
+├── routers/           # Эндпоинты FastAPI (HTTP-маршруты)
+├── schemas/           # Pydantic схемы для валидации запросов/ответов
+├── utils/             # Утилитарный код (общие функции, вспомогательные классы)
+├── LLM.py             # Логика взаимодействия с языковой моделью (LLM)
+├── main.py            # Точка входа: создание приложения FastAPI, подключение роутеров
+├── alembic.ini        # Конфигурация Alembic для миграций
+└── requirements.txt   # Список зависимостей Python
+
+
 
